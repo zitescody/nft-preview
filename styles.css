@@ -1,0 +1,162 @@
+/*universal styles*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    /*colors*/
+    --softblue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --verydarkblueMAIN: hsl(217, 54%, 11%);
+    --verydarkblueCARD: hsl(216, 50%, 16%);
+    --verydarkblueLINE: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /*fonts*/
+    --outfit: 'Outfit', sans-serif;
+    --outfitLight: 300;
+    --outfitMedium: 400;
+    --outfitHeavy: 600;
+
+    --h1Size: 16pt;
+    --h1SizeBig: 18pt;
+    --pSize: 14pt;
+    --pSizeBig: 16pt;
+
+    --h1Color: var(--white);
+    --pColor: var(--softblue);
+    --strongColor: var(--cyan);
+}
+
+/*layout styles*/
+body {
+    display: grid;
+    place-items: center;
+    background-color: var(--verydarkblueMAIN);
+    font-family: var(--outfit);
+    font-size: 18px;
+}
+
+main {
+    margin: 10% 5% 10%;
+    background-color: var(--verydarkblueCARD);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+    max-width: 500px;
+    
+}
+
+section {
+    margin: 8%;
+}
+
+div.icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.ethereum,
+div.time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+div.author-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+/*content styles*/
+h1 {
+    font-size: var(--h1Size);
+    font-weight: var(--outfitHeavy);
+    color: var(--h1Color);
+}
+
+p {
+    font-size: var(--pSize);
+    font-weight: var(--outfitLight);
+    color: var(--pColor);
+}
+
+p.eth-content {
+    color: var(--cyan);
+}
+
+strong {
+    color: var(--white);
+}
+
+h1:hover, strong:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+img.img {
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+div.eye {
+    display: none;
+    border-radius: 8px;
+    position: absolute;
+    inset: 0;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    place-items: center;
+}
+
+img.icon-ethereum {
+    height: 30px;
+    width: 20px;
+}
+
+img.icon-clock {
+    height: 20px;
+    width: 20px;
+}
+
+div.line {
+    margin: 5% 0% 5%;
+    height: 1px;
+    width: 100%;
+    background-color: var(--verydarkblueLINE);
+}
+
+img.author-img {
+    height: 45px;
+    width: 45px;
+    border: 1px solid var(--white);
+    border-radius: 30px;
+}
+
+/*media queries*/
+@media only screen and (min-width: 540px) {
+    main {
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: var(--h1SizeBig);
+    }
+
+    p {
+        font-size: var(--pSizeBig);
+    }
+} 
+/*attribution styles*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
